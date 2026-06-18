@@ -1,0 +1,158 @@
+.sec {
+  position: relative;
+  background: linear-gradient(180deg, var(--ink), var(--black));
+  border-top: 1px solid var(--line-soft);
+  overflow: hidden;
+}
+.glow {
+  position: absolute;
+  left: -10%;
+  bottom: -30%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(212, 175, 95, 0.10), transparent 60%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 22px 0 20px;
+}
+.lead {
+  font-size: 1.06rem;
+  color: var(--muted);
+  max-width: 440px;
+  margin-bottom: 40px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contactItem {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--white);
+  transition: color 0.3s var(--ease);
+}
+.contactItem:last-child {
+  border-bottom: 1px solid var(--line-soft);
+}
+.contactItem:hover {
+  color: var(--gold);
+}
+.cLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--faint);
+  width: 54px;
+  flex-shrink: 0;
+}
+
+/* Form */
+.formCard {
+  background: linear-gradient(160deg, var(--panel-2), var(--ink));
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 40px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+.field label {
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.field input,
+.field textarea {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--line-soft);
+  border-radius: 3px;
+  padding: 14px 16px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+  resize: vertical;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--faint);
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gold-grad);
+  border: 0;
+  padding: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px -10px rgba(212, 175, 95, 0.5);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
+@media (max-width: 560px) {
+  .formCard {
+    padding: 28px 22px;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
