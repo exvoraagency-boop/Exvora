@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     images: ["/images/banner2.png"],
   },
   icons: { icon: "/images/logo.png" },
+    verification: {
+          google: "Hl-w0J6MzTnF1jsB4DpsyVdDrPpv4qBheHUfQIoFQ_U",
+    },
 };
 
 export default function RootLayout({
