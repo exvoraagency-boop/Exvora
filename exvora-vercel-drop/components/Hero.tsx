@@ -27,9 +27,9 @@ export default function Hero() {
           </h1>
 
           <p className={styles.sub}>
-            EXVORA is a Bahrain-based agency focused on one thing: running Meta
-            and TikTok ad campaigns that put your business in front of the right
-            people — and turn them into paying customers.
+            EXVORA is a Bahrain-based agency focused on one thing: running
+            Facebook, Instagram &amp; TikTok ad campaigns that put your business
+            in front of the right people — and turn them into paying customers.
           </p>
 
           <div className={styles.actions}>

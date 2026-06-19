@@ -20,7 +20,7 @@ export default function Footer() {
           </a>
           <p className={styles.tagline}>Paid Social Ads · Bahrain</p>
           <p className={styles.blurb}>
-            Meta &amp; TikTok ad campaigns
+            Facebook, Instagram &amp; TikTok ads
             <br />
             that bring you customers.
           </p>

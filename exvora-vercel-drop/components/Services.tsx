@@ -29,7 +29,7 @@ export default function Services() {
           <p>
             We&apos;re a specialist agency, not a do-everything shop. Right now
             we put all our energy into one thing — running paid ad campaigns on
-            Meta and TikTok that bring local businesses real customers.
+            Facebook, Instagram &amp; TikTok ad campaigns that bring local businesses real customers.
           </p>
         </div>
 
@@ -48,13 +48,13 @@ export default function Services() {
           <div className={styles.primaryBody}>
             <h3>Paid Social Advertising</h3>
             <p>
-              Done-for-you Meta (Instagram &amp; Facebook) and TikTok ad
+              Done-for-you Facebook, Instagram &amp; TikTok ad
               campaigns. We handle the strategy, the creative, the targeting and
               the day-to-day optimisation — you focus on handling the new
               customers it brings in.
             </p>
             <ul>
-              <li>Meta &amp; TikTok ad campaigns</li>
+              <li>Facebook, Instagram &amp; TikTok ads</li>
               <li>Campaign strategy &amp; setup</li>
               <li>Daily monitoring &amp; optimisation</li>
               <li>Clear, honest reporting</li>

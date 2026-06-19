@@ -14,7 +14,7 @@ const steps = [
   {
     n: "03",
     title: "Launch",
-    desc: "Your ads go live on Meta and TikTok. We watch the numbers closely in the first days and adjust fast.",
+    desc: "Your ads go live on Facebook, Instagram and TikTok. We watch the numbers closely in the first days and adjust fast.",
   },
   {
     n: "04",
