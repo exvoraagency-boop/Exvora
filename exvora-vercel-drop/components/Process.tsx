@@ -4,22 +4,22 @@ const steps = [
   {
     n: "01",
     title: "Discover",
-    desc: "We dig into your market, audience and numbers. No assumptions — just a clear read on where the opportunity actually is.",
+    desc: "We learn your business, your offer and your ideal customer — so the ads speak to the people most likely to buy.",
   },
   {
     n: "02",
-    title: "Design",
-    desc: "Brand, message and creative come together into a positioning that's unmistakably yours and built to convert.",
+    title: "Create",
+    desc: "We build the ad creative and copy and set up your campaigns properly, with tracking wired in from day one.",
   },
   {
     n: "03",
-    title: "Deploy",
-    desc: "Campaigns go live across the right channels, with tracking wired in from day one so every result is measurable.",
+    title: "Launch",
+    desc: "Your ads go live on Meta and TikTok. We watch the numbers closely in the first days and adjust fast.",
   },
   {
     n: "04",
-    title: "Scale",
-    desc: "We double down on what works, cut what doesn't, and compound the wins into predictable, repeatable growth.",
+    title: "Optimise",
+    desc: "We double down on what's working, cut what isn't, and keep improving cost-per-result as the campaign matures.",
   },
 ];
 

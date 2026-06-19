@@ -13,7 +13,7 @@ export default function CTA() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nCompany: ${form.company}\n\n${form.msg}`
     );
-    window.location.href = `mailto:hello@exvoraagency.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:exvora.agency@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -23,19 +23,19 @@ export default function CTA() {
         <div className={`${styles.left} reveal`}>
           <p className="eyebrow">Let&apos;s talk</p>
           <h2 className={styles.title}>
-            Ready to build a brand
+            Ready for ads that
             <br />
-            that <span className="gold-text">grows?</span>
+            actually <span className="gold-text">convert?</span>
           </h2>
           <p className={styles.lead}>
-            Tell us where you are and where you want to be. We&apos;ll come back
-            with a clear, no-fluff plan for getting there.
+            Tell us about your business and what you&apos;re selling. We&apos;ll
+            come back with a clear, no-fluff plan for your ad campaigns.
           </p>
 
           <div className={styles.contacts}>
-            <a href="mailto:hello@exvoraagency.com" className={styles.contactItem}>
+            <a href="mailto:exvora.agency@gmail.com" className={styles.contactItem}>
               <span className={styles.cLabel}>Email</span>
-              hello@exvoraagency.com
+              exvora.agency@gmail.com
             </a>
             <a href="https://exvoraagency.com" className={styles.contactItem}>
               <span className={styles.cLabel}>Web</span>

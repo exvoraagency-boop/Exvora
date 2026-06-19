@@ -1,10 +1,10 @@
 import styles from "./Stats.module.css";
 
-const stats = [
-  { v: "120+", l: "Brands launched & scaled" },
-  { v: "4.8x", l: "Average return on ad spend" },
-  { v: "98%", l: "Client retention rate" },
-  { v: "8M+", l: "Impressions driven monthly" },
+const points = [
+  { v: "Bahrain-based", l: "Local team, local market knowledge" },
+  { v: "Paid social", l: "Meta & TikTok ads, done properly" },
+  { v: "Founding clients", l: "Now onboarding our first partners" },
+  { v: "Results-focused", l: "We optimise for leads, not vanity metrics" },
 ];
 
 export default function Stats() {
@@ -12,7 +12,7 @@ export default function Stats() {
     <section className={styles.band}>
       <div className={styles.chev} aria-hidden="true" />
       <div className={`wrap ${styles.inner}`}>
-        {stats.map((s, i) => (
+        {points.map((s, i) => (
           <div
             key={s.l}
             className={`${styles.stat} reveal`}

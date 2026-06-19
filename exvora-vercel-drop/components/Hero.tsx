@@ -17,19 +17,19 @@ export default function Hero() {
 
       <div className={`wrap ${styles.inner}`}>
         <div className={styles.left}>
-          <p className={`eyebrow ${styles.eb}`}>Marketing Agency</p>
+          <p className={`eyebrow ${styles.eb}`}>Paid Social Ads · Bahrain</p>
 
           <h1 className={styles.title}>
-            <span className={styles.line}>We build</span>
+            <span className={styles.line}>Ads that bring</span>
             <span className={styles.line}>
-              brands that <span className="gold-text">grow.</span>
+              you <span className="gold-text">customers.</span>
             </span>
           </h1>
 
           <p className={styles.sub}>
-            Strategy. Creativity. Results. EXVORA turns ambitious ideas into
-            brands people remember and campaigns that move the numbers that
-            matter.
+            EXVORA is a Bahrain-based agency focused on one thing: running Meta
+            and TikTok ad campaigns that put your business in front of the right
+            people — and turn them into paying customers.
           </p>
 
           <div className={styles.actions}>

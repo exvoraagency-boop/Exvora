@@ -1,14 +1,14 @@
 import styles from "./Logos.module.css";
 
 const items = [
-  "STRATEGY",
-  "BRANDING",
-  "PAID SOCIAL",
-  "CONTENT",
-  "SEO",
-  "WEB DESIGN",
-  "PERFORMANCE",
-  "ANALYTICS",
+  "META ADS",
+  "TIKTOK ADS",
+  "AD CREATIVE",
+  "COPYWRITING",
+  "AUDIENCE TARGETING",
+  "A/B TESTING",
+  "CONVERSION TRACKING",
+  "REPORTING",
 ];
 
 export default function Logos() {
