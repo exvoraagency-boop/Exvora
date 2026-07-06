@@ -6,7 +6,9 @@ export default function Work() {
       <div className="wrap">
         <div className={`section-head reveal ${styles.head}`}>
           <p className="eyebrow">Our work</p>
-          <h2>Built on a brand we believe in.</h2>
+          <h2>
+            Built on a brand we <em className="foil">believe in.</em>
+          </h2>
           <p>
             EXVORA started by building its own identity from the ground up — the
             same care we bring to every campaign. Client case studies are on the

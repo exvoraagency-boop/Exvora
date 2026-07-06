@@ -25,7 +25,7 @@ export default function CTA() {
           <h2 className={styles.title}>
             Ready for ads that
             <br />
-            actually <span className="gold-text">convert?</span>
+            actually <em className="foil">convert?</em>
           </h2>
           <p className={styles.lead}>
             Tell us about your business and what you&apos;re selling. We&apos;ll

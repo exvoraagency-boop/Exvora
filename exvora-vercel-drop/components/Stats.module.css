@@ -1,10 +1,27 @@
 .band {
   position: relative;
-  padding: 70px 0;
-  background: linear-gradient(180deg, var(--ink), var(--black));
-  border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
+  padding: 74px 0;
+  background: linear-gradient(180deg, var(--panel), var(--ink));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   overflow: hidden;
+}
+/* Inner hairlines — the double rule of luxury packaging */
+.band::before,
+.band::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line-soft);
+  pointer-events: none;
+}
+.band::before {
+  top: 6px;
+}
+.band::after {
+  bottom: 6px;
 }
 .chev {
   position: absolute;
@@ -44,10 +61,11 @@
 }
 .v {
   display: block;
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.1;
   margin-bottom: 12px;
 }
