@@ -1,24 +1,44 @@
 :root {
-  /* Brand palette — pulled from logo & banners */
-  --black: #050505;
-  --ink: #0a0a0b;
-  --panel: #0f0f11;
-  --panel-2: #141417;
-  --line: rgba(212, 175, 95, 0.16);
-  --line-soft: rgba(255, 255, 255, 0.07);
+  /* ---- Gilded Editorial palette ---- */
+  /* Onyx — page base, black warmed almost imperceptibly */
+  --black: #070604;
+  --ink: #0c0a06;
+  /* Smoked Bronze — candlelit panel surfaces */
+  --panel: #151007;
+  --panel-2: #1a140a;
+  --line: rgba(212, 175, 95, 0.2);
+  --line-soft: rgba(212, 175, 95, 0.09);
 
+  /* Antique Gold / Champagne / Deep Bronze */
   --gold: #d4af5f;
-  --gold-bright: #f3d488;
+  --gold-bright: #f1d689;
   --gold-deep: #a9802f;
   --gold-grad: linear-gradient(135deg, #f6dd9a 0%, #d4af5f 38%, #a9802f 72%, #e9c87a 100%);
 
-  --white: #ffffff;
-  --mist: #d9d9de;
-  --muted: #9a9aa2;
-  --faint: #6a6a72;
+  /* Foil — resting gold lives in the first third; the champagne
+     hotspot mid-image is what sweeps across during the sheen */
+  --foil-grad: linear-gradient(
+    100deg,
+    #f6dd9a 0%,
+    #d4af5f 14%,
+    #a9802f 26%,
+    #c9a556 33%,
+    #f8ecc2 47%,
+    #f1d689 54%,
+    #d4af5f 68%,
+    #a9802f 84%,
+    #d4af5f 100%
+  );
 
-  --font-display: var(--font-display), "Segoe UI", sans-serif;
-  --font-body: var(--font-body), system-ui, sans-serif;
+  /* Ivory / Stone — every neutral runs warm */
+  --white: #f4eee1;
+  --mist: #ddd5c2;
+  --muted: #a69c88;
+  --faint: #766d5b;
+
+  /* --font-display / --font-body / --font-serif are set on <html> by
+     next/font (with their own fallbacks) — do not alias them here:
+     a self-referencing var() invalidates the whole stack. */
 
   --maxw: 1240px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -95,23 +115,51 @@ img {
   color: transparent;
 }
 
+/* ---------- Signature: gold-foil sheen ----------
+   A band of light crosses gold text once when it enters the
+   viewport — like light passing over foil on a printed card. */
+.foil {
+  background-image: var(--foil-grad);
+  background-size: 300% 100%;
+  background-position: 0% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.reveal.in .foil,
+.reveal.in.foil {
+  animation: foilSweep 1.7s var(--ease) 0.4s both;
+}
+@keyframes foilSweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
+}
+
 .section {
   position: relative;
   padding: 130px 0;
 }
 
 .section-head {
-  max-width: 720px;
+  max-width: 760px;
   margin-bottom: 70px;
 }
 .section-head h2 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.1rem, 4.4vw, 3.4rem);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 3.9rem);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
   color: var(--white);
-  margin: 22px 0 18px;
+  margin: 24px 0 20px;
+}
+.section-head h2 em {
+  font-style: italic;
 }
 .section-head p {
   font-size: 1.06rem;

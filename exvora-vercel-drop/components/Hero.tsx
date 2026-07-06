@@ -7,12 +7,11 @@ export default function Hero() {
       <div className={styles.grain} aria-hidden="true" />
       <div className={styles.glow} aria-hidden="true" />
 
-      {/* Signature: layered gold chevrons + light streaks */}
-      <div className={styles.chevrons} aria-hidden="true">
-        <span className={styles.chev1} />
-        <span className={styles.chev2} />
-        <span className={styles.streak} />
-        <span className={`${styles.streak} ${styles.streak2}`} />
+      {/* Signature: giant foil-stamped X bleeding off the right edge.
+          Gold half is real foil — a sheen crosses it once on load. */}
+      <div className={styles.stamp} aria-hidden="true">
+        <span className={`${styles.stampHalf} ${styles.stampGold}`} />
+        <span className={`${styles.stampHalf} ${styles.stampGhost}`} />
       </div>
 
       <div className={`wrap ${styles.inner}`}>
@@ -22,7 +21,7 @@ export default function Hero() {
           <h1 className={styles.title}>
             <span className={styles.line}>Ads that bring</span>
             <span className={styles.line}>
-              you <span className="gold-text">customers.</span>
+              you <em className={`foil ${styles.foilHero}`}>customers.</em>
             </span>
           </h1>
 
@@ -55,35 +54,6 @@ export default function Hero() {
             <span>Our strategy.</span>
             <span className="gold-text">Extraordinary results.</span>
           </div>
-        </div>
-
-        {/* Big assembling X */}
-        <div className={styles.mark} aria-hidden="true">
-          <svg viewBox="0 0 100 100" className={styles.bigx}>
-            <defs>
-              <linearGradient id="hx-gold" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#f6dd9a" />
-                <stop offset="42%" stopColor="#d4af5f" />
-                <stop offset="78%" stopColor="#a9802f" />
-                <stop offset="100%" stopColor="#e9c87a" />
-              </linearGradient>
-              <linearGradient id="hx-white" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="100%" stopColor="#cfcfd4" />
-              </linearGradient>
-            </defs>
-            <path
-              className={styles.xGold}
-              d="M8 6 H30 L58 50 L30 94 H8 L36 50 Z"
-              fill="url(#hx-gold)"
-            />
-            <path
-              className={styles.xWhite}
-              d="M92 6 H70 L42 50 L70 94 H92 L64 50 Z"
-              fill="url(#hx-white)"
-            />
-          </svg>
-          <div className={styles.markRing} />
         </div>
       </div>
 

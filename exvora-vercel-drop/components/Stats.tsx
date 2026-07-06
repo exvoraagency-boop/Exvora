@@ -18,7 +18,7 @@ export default function Stats() {
             className={`${styles.stat} reveal`}
             style={{ transitionDelay: `${i * 0.08}s` }}
           >
-            <span className={`${styles.v} gold-text`}>{s.v}</span>
+            <span className={`${styles.v} foil`}>{s.v}</span>
             <span className={styles.l}>{s.l}</span>
           </div>
         ))}

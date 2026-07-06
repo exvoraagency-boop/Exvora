@@ -76,9 +76,11 @@
   color: var(--faint);
 }
 .motto {
-  font-family: var(--font-display);
-  letter-spacing: 0.06em;
-  color: var(--muted);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--gold);
 }
 
 @media (max-width: 820px) {

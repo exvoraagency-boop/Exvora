@@ -24,7 +24,7 @@ export default function Services() {
           <h2>
             One focus, done right:
             <br />
-            paid social ads.
+            <em className="foil">paid social ads.</em>
           </h2>
           <p>
             We&apos;re a specialist agency, not a do-everything shop. Right now

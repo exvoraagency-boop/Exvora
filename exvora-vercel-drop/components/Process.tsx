@@ -29,7 +29,9 @@ export default function Process() {
       <div className="wrap">
         <div className={`section-head reveal ${styles.head}`}>
           <p className="eyebrow">How we work</p>
-          <h2>A process built to compound.</h2>
+          <h2>
+            A process built to <em className="foil">compound.</em>
+          </h2>
           <p>
             Four phases, run on repeat. Each cycle sharpens the last — that&apos;s
             how short campaigns turn into long-term growth.

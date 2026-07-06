@@ -26,6 +26,15 @@ const inter = localFont({
   display: "swap",
 });
 
+const fraunces = localFont({
+  src: [
+    { path: "./fonts/fraunces-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/fraunces-italic-400.woff2", weight: "400", style: "italic" },
+  ],
+  variable: "--font-serif",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://exvoraagency.com"),
   title: "EXVORA — Marketing Agency | Strategy. Creativity. Results.",
@@ -67,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="en" className={`${sora.variable} ${inter.variable} ${fraunces.variable}`}>
       <body>{children}</body>
     </html>
   );

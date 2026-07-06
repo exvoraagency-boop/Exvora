@@ -9,7 +9,7 @@
   border-bottom: 1px solid transparent;
 }
 .scrolled {
-  background: rgba(7, 7, 8, 0.72);
+  background: rgba(7, 6, 4, 0.72);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom: 1px solid var(--line);
@@ -79,15 +79,19 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--black);
-  background: var(--gold-grad);
+  background-image: var(--foil-grad);
+  background-size: 300% 100%;
+  background-position: 0% 0;
   padding: 11px 22px;
   border-radius: 2px;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    background-position 0.9s var(--ease);
   white-space: nowrap;
 }
 .cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px -8px rgba(212, 175, 95, 0.5);
+  background-position: 56% 0;
 }
 
 .burger {
@@ -126,7 +130,7 @@
     padding: 0 28px;
     max-height: 0;
     overflow: hidden;
-    background: rgba(7, 7, 8, 0.96);
+    background: rgba(7, 6, 4, 0.96);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid transparent;
