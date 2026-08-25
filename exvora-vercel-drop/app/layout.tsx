@@ -36,23 +36,38 @@ const fraunces = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://exvoraagency.com"),
-  title: "EXVORA — Marketing Agency | Strategy. Creativity. Results.",
+  metadataBase: new URL("https://www.exvoraagency.com"),
+  title: "EXVORA — Ad Campaigns That Bring Clinics Patients | Bahrain",
   description:
-    "EXVORA is a results-driven marketing agency. We build brands that grow through strategy, branding, digital marketing and performance. Your vision. Our strategy. Extraordinary results.",
+    "EXVORA is a Bahrain-based agency running strategic, data-driven ad campaigns that put your clinic in front of the right patients — and turn them into booked appointments. Your vision. Our strategy. Extraordinary results.",
   keywords: [
-    "marketing agency",
-    "SMMA",
-    "social media marketing",
-    "branding",
-    "digital marketing",
+    "clinic marketing",
+    "patient acquisition",
+    "clinic advertising Bahrain",
+    "aesthetic clinic marketing",
+    "healthcare advertising",
     "EXVORA",
-    "performance marketing",
+    "medical marketing agency",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "EXVORA — Marketing Agency",
-    description: "Strategy. Creativity. Results. We build brands that grow.",
-    url: "https://exvoraagency.com",
+    title: "EXVORA — Ad Campaigns That Bring Clinics Patients",
+    description:
+      "Strategic, data-driven advertising that puts your clinic in front of the right patients — and turns them into booked appointments.",
+    url: "https://www.exvoraagency.com",
     siteName: "EXVORA Agency",
     images: [{ url: "/images/banner2.png", width: 1942, height: 809 }],
     locale: "en_US",
@@ -60,8 +75,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EXVORA — Marketing Agency",
-    description: "Strategy. Creativity. Results. We build brands that grow.",
+    title: "EXVORA — Ad Campaigns That Bring Clinics Patients",
+    description:
+      "Strategic, data-driven advertising that puts your clinic in front of the right patients — and turns them into booked appointments.",
     images: ["/images/banner2.png"],
   },
   icons: { icon: "/images/logo.png" },

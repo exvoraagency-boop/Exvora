@@ -2,7 +2,7 @@ import styles from "./Stats.module.css";
 
 const points = [
   { v: "Bahrain-based", l: "Local team, local market knowledge" },
-  { v: "Paid social", l: "Facebook, Instagram & TikTok ads" },
+  { v: "Patient growth", l: "Strategic, data-driven ad campaigns" },
   { v: "Founding clients", l: "Now onboarding our first partners" },
   { v: "Results-focused", l: "We optimise for leads, not vanity metrics" },
 ];

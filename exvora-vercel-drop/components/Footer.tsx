@@ -18,11 +18,11 @@ export default function Footer() {
             <XMark size={34} />
             <span>EXVORA</span>
           </a>
-          <p className={styles.tagline}>Paid Social Ads · Bahrain</p>
+          <p className={styles.tagline}>Patient Acquisition · Bahrain</p>
           <p className={styles.blurb}>
-            Facebook, Instagram &amp; TikTok ads
+            Strategic, data-driven ad campaigns
             <br />
-            that bring you customers.
+            that bring you patients.
           </p>
         </div>
 

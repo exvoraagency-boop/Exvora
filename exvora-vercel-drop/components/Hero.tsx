@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import GoldDust from "./GoldDust";
 
 export default function Hero() {
   return (
@@ -6,29 +7,31 @@ export default function Hero() {
       {/* Ambient atmosphere */}
       <div className={styles.grain} aria-hidden="true" />
       <div className={styles.glow} aria-hidden="true" />
+      <GoldDust className={styles.dust} />
 
       {/* Signature: giant foil-stamped X bleeding off the right edge.
-          Gold half is real foil — a sheen crosses it once on load. */}
-      <div className={styles.stamp} aria-hidden="true">
+          Gold half is real foil — a sheen crosses it once on load,
+          then a glint passes over it every few seconds. */}
+      <div className={styles.stamp} data-parallax="0.12" aria-hidden="true">
         <span className={`${styles.stampHalf} ${styles.stampGold}`} />
         <span className={`${styles.stampHalf} ${styles.stampGhost}`} />
       </div>
 
       <div className={`wrap ${styles.inner}`}>
         <div className={styles.left}>
-          <p className={`eyebrow ${styles.eb}`}>Paid Social Ads · Bahrain</p>
+          <p className={`eyebrow ${styles.eb}`}>Patient Acquisition · Bahrain</p>
 
           <h1 className={styles.title}>
             <span className={styles.line}>Ads that bring</span>
             <span className={styles.line}>
-              you <em className={`foil ${styles.foilHero}`}>customers.</em>
+              you <em className={`foil ${styles.foilHero}`}>patients.</em>
             </span>
           </h1>
 
           <p className={styles.sub}>
-            EXVORA is a Bahrain-based agency focused on one thing: running
-            Facebook, Instagram &amp; TikTok ad campaigns that put your business
-            in front of the right people — and turn them into paying customers.
+            EXVORA is a Bahrain-based agency focused on one thing: strategic,
+            data-driven ad campaigns that put your clinic in front of the right
+            patients — and turn them into booked appointments.
           </p>
 
           <div className={styles.actions}>

@@ -105,6 +105,15 @@ img {
   width: 30px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold));
+  transform-origin: left;
+}
+.reveal.in .eyebrow::before {
+  animation: lineDraw 0.9s var(--ease) both;
+}
+@keyframes lineDraw {
+  from {
+    transform: scaleX(0);
+  }
 }
 
 .gold-text {
@@ -137,6 +146,44 @@ img {
   }
   to {
     background-position: 0% 0;
+  }
+}
+
+/* Gold hairline tracking scroll progress (injected by Fx) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-grad);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* Cursor spotlight — a soft gold glow follows the pointer on cards */
+@media (hover: hover) {
+  [data-spot] {
+    position: relative;
+  }
+  [data-spot]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      240px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(212, 175, 95, 0.1),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+    pointer-events: none;
+  }
+  [data-spot]:hover::after {
+    opacity: 1;
   }
 }
 

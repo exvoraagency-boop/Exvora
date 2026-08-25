@@ -30,6 +30,15 @@
   pointer-events: none;
 }
 
+.dust {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* ---- Foil-stamped X ---- */
 .stamp {
   position: absolute;
@@ -37,7 +46,8 @@
   right: max(-14vw, -180px);
   width: clamp(480px, 52vw, 760px);
   aspect-ratio: 1;
-  transform: translateY(-50%);
+  /* --par is the scroll parallax offset, set by Fx */
+  transform: translateY(calc(-50% + var(--par, 0px)));
   pointer-events: none;
   z-index: 1;
   filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.65));
@@ -54,6 +64,34 @@
   background-size: 300% 100%;
   background-position: 0% 0;
   animation: stampIn 1.1s var(--ease) 0.25s both, foilSweep 2s var(--ease) 0.9s both;
+}
+/* Recurring glint — a narrow band of light crosses the gold half
+   every few seconds (the clip-path also clips this pseudo) */
+.stampGold::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    100deg,
+    transparent 46%,
+    rgba(255, 246, 220, 0.5) 50%,
+    transparent 54%
+  );
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  background-position: 120% 0;
+  animation: glint 8s linear 3.4s infinite;
+}
+@keyframes glint {
+  0% {
+    background-position: 120% 0;
+  }
+  22% {
+    background-position: -20% 0;
+  }
+  100% {
+    background-position: -20% 0;
+  }
 }
 /* Right half — ghosted emboss, half of the mark still in shadow */
 .stampGhost {
@@ -253,7 +291,7 @@
   /* Stamp becomes a centered watermark behind the copy */
   .stamp {
     right: 50%;
-    transform: translate(50%, -50%);
+    transform: translate(50%, calc(-50% + var(--par, 0px)));
     width: min(120vw, 560px);
     opacity: 0.16;
     filter: none;

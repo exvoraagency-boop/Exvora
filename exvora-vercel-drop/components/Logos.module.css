@@ -35,6 +35,9 @@
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }
+.strip:hover .track {
+  animation-play-state: paused;
+}
 @media (prefers-reduced-motion: reduce) {
   .track { animation: none; }
 }

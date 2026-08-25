@@ -32,7 +32,7 @@ export default function Work() {
             </div>
           </article>
 
-          <div className={`${styles.soon} reveal`}>
+          <div className={`${styles.soon} reveal`} data-spot>
             <div className={styles.soonInner}>
               <span className={styles.soonLabel}>Coming soon</span>
               <h3>Client case studies</h3>
