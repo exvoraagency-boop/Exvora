@@ -4,7 +4,7 @@ const steps = [
   {
     n: "01",
     title: "Discover",
-    desc: "We learn your business, your offer and your ideal customer — so the ads speak to the people most likely to buy.",
+    desc: "We learn your clinic, your offer and your ideal patient — so the ads speak to the patients most likely to book.",
   },
   {
     n: "02",
@@ -14,7 +14,7 @@ const steps = [
   {
     n: "03",
     title: "Launch",
-    desc: "Your ads go live on Facebook, Instagram and TikTok. We watch the numbers closely in the first days and adjust fast.",
+    desc: "Your ads go live across the right channels. We watch the numbers closely in the first days and adjust fast.",
   },
   {
     n: "04",
@@ -39,7 +39,7 @@ export default function Process() {
         </div>
 
         <div className={styles.steps}>
-          <div className={styles.rail} aria-hidden="true" />
+          <div className={`${styles.rail} reveal`} aria-hidden="true" />
           {steps.map((s, i) => (
             <div
               key={s.n}

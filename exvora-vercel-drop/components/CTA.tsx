@@ -28,7 +28,7 @@ export default function CTA() {
             actually <em className="foil">convert?</em>
           </h2>
           <p className={styles.lead}>
-            Tell us about your business and what you&apos;re selling. We&apos;ll
+            Tell us about your clinic and what you&apos;re offering. We&apos;ll
             come back with a clear, no-fluff plan for your ad campaigns.
           </p>
 
@@ -44,7 +44,7 @@ export default function CTA() {
           </div>
         </div>
 
-        <div className={`${styles.formCard} reveal`}>
+        <div className={`${styles.formCard} reveal`} data-spot>
           <div className={styles.field}>
             <label htmlFor="name">Your name</label>
             <input

@@ -1,10 +1,8 @@
 import styles from "./Logos.module.css";
 
 const items = [
-  "META ADS",
-  "TIKTOK ADS",
+  "PAID ADS",
   "AD CREATIVE",
-  "COPYWRITING",
   "AUDIENCE TARGETING",
   "A/B TESTING",
   "CONVERSION TRACKING",

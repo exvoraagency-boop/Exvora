@@ -7,7 +7,7 @@ const supporting = [
   },
   {
     title: "Audience & Targeting",
-    desc: "We find the people most likely to buy and put your offer in front of them, then refine as the data comes in.",
+    desc: "We find the patients most likely to book and put your offer in front of them, then refine as the data comes in.",
   },
   {
     title: "Tracking & Reporting",
@@ -24,17 +24,17 @@ export default function Services() {
           <h2>
             One focus, done right:
             <br />
-            <em className="foil">paid social ads.</em>
+            <em className="foil">patient-generating ads.</em>
           </h2>
           <p>
             We&apos;re a specialist agency, not a do-everything shop. Right now
-            we put all our energy into one thing — running paid ad campaigns on
-            Facebook, Instagram &amp; TikTok ad campaigns that bring local businesses real customers.
+            we put all our energy into one thing — running strategic, data-driven
+            ad campaigns that bring clinics real patients.
           </p>
         </div>
 
         {/* Primary service */}
-        <article className={`${styles.primary} reveal`}>
+        <article className={`${styles.primary} reveal`} data-spot>
           <div className={styles.primaryLeft}>
             <span className={styles.primaryIcon}>
               <svg viewBox="0 0 48 48" fill="none">
@@ -46,15 +46,14 @@ export default function Services() {
             <span className={styles.primaryLabel}>Our core service</span>
           </div>
           <div className={styles.primaryBody}>
-            <h3>Paid Social Advertising</h3>
+            <h3>Patient-Generating Ad Campaigns</h3>
             <p>
-              Done-for-you Facebook, Instagram &amp; TikTok ad
-              campaigns. We handle the strategy, the creative, the targeting and
-              the day-to-day optimisation — you focus on handling the new
-              customers it brings in.
+              Done-for-you, strategic paid advertising. We handle the strategy,
+              the creative, the targeting and the day-to-day optimisation — you
+              focus on handling the new patients it brings in.
             </p>
             <ul>
-              <li>Facebook, Instagram &amp; TikTok ads</li>
+              <li>Targeted paid advertising</li>
               <li>Campaign strategy &amp; setup</li>
               <li>Daily monitoring &amp; optimisation</li>
               <li>Clear, honest reporting</li>
@@ -72,6 +71,7 @@ export default function Services() {
               key={s.title}
               className={`${styles.card} reveal`}
               style={{ transitionDelay: `${i * 0.08}s` }}
+              data-spot
             >
               <h4>{s.title}</h4>
               <p>{s.desc}</p>

@@ -8,11 +8,13 @@ import Work from "@/components/Work";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import Fx from "@/components/Fx";
 
 export default function Home() {
   return (
     <>
       <Reveal />
+      <Fx />
       <Nav />
       <main>
         <Hero />

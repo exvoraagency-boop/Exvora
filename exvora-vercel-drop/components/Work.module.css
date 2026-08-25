@@ -37,6 +37,24 @@
 .brandCard:hover .media img {
   transform: scale(1.04);
 }
+/* Foil glint across the artwork on hover */
+.media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 246, 220, 0.16) 50%,
+    transparent 60%
+  );
+  transform: translateX(-130%);
+  transition: transform 1s var(--ease);
+  pointer-events: none;
+}
+.brandCard:hover .media::after {
+  transform: translateX(130%);
+}
 .meta {
   padding: 28px 30px 30px;
 }
