@@ -13,7 +13,7 @@ export default function CTA() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nCompany: ${form.company}\n\n${form.msg}`
     );
-    window.location.href = `mailto:exvora.agency@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contact@exvoraagency.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -33,9 +33,9 @@ export default function CTA() {
           </p>
 
           <div className={styles.contacts}>
-            <a href="mailto:exvora.agency@gmail.com" className={styles.contactItem}>
+            <a href="mailto:contact@exvoraagency.com" className={styles.contactItem}>
               <span className={styles.cLabel}>Email</span>
-              exvora.agency@gmail.com
+              contact@exvoraagency.com
             </a>
             <a href="https://exvoraagency.com" className={styles.contactItem}>
               <span className={styles.cLabel}>Web</span>

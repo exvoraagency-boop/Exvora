@@ -47,7 +47,7 @@ export default function Footer() {
 
         <div className={styles.linksCol}>
           <span className={styles.colHead}>Get in touch</span>
-          <a href="mailto:exvora.agency@gmail.com">exvora.agency@gmail.com</a>
+          <a href="mailto:contact@exvoraagency.com">contact@exvoraagency.com</a>
           <a href="https://exvoraagency.com">exvoraagency.com</a>
         </div>
       </div>
