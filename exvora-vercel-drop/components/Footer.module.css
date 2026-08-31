@@ -63,6 +63,48 @@
   padding-left: 6px;
 }
 
+/* Social links with a platform glyph */
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.social svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Phone row: call + WhatsApp buttons to the left of the number */
+.phoneRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--gold);
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+/* Higher specificity than `.linksCol a:hover` so the buttons don't shift */
+.phoneRow .iconBtn:hover {
+  padding-left: 0;
+  border-color: var(--gold);
+  background: rgba(212, 175, 95, 0.1);
+  transform: translateY(-2px);
+}
+.phoneNum {
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+}
+
 .bottom {
   border-top: 1px solid var(--line-soft);
   padding: 26px 0;

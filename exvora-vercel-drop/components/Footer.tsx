@@ -1,13 +1,18 @@
 import XMark from "./XMark";
+import { InstagramIcon, TikTokIcon, XIcon, PhoneIcon, WhatsAppIcon } from "./Icons";
 import styles from "./Footer.module.css";
 
 // Add your real profile URLs here. Leave a value as "" and that link
 // simply won't appear — so there are never any dead links.
 const social = [
-  { label: "Instagram", href: "https://instagram.com/exvora.agency" },
-  { label: "TikTok", href: "https://tiktok.com/@exvora.agency" },
-  { label: "X / Twitter", href: "https://x.com/exvoraagency" },
+  { label: "Instagram", href: "https://instagram.com/exvoraagency", Icon: InstagramIcon },
+  { label: "TikTok", href: "https://tiktok.com/@exvoraagency", Icon: TikTokIcon },
+  { label: "X / Twitter", href: "https://x.com/exvoraagency", Icon: XIcon },
 ].filter((s) => s.href);
+
+// Bahrain number. tel: and wa.me need the digits only, no spaces or "+".
+const PHONE_DISPLAY = "+973 3892 2344";
+const PHONE_E164 = "97338922344";
 
 export default function Footer() {
   return (
@@ -38,7 +43,14 @@ export default function Footer() {
           <div className={styles.linksCol}>
             <span className={styles.colHead}>Social</span>
             {social.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.social}
+              >
+                <s.Icon size={16} />
                 {s.label}
               </a>
             ))}
@@ -47,6 +59,27 @@ export default function Footer() {
 
         <div className={styles.linksCol}>
           <span className={styles.colHead}>Get in touch</span>
+          <div className={styles.phoneRow}>
+            <a
+              href={`tel:+${PHONE_E164}`}
+              className={styles.iconBtn}
+              aria-label={`Call ${PHONE_DISPLAY}`}
+            >
+              <PhoneIcon size={15} />
+            </a>
+            <a
+              href={`https://wa.me/${PHONE_E164}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconBtn}
+              aria-label={`WhatsApp ${PHONE_DISPLAY}`}
+            >
+              <WhatsAppIcon size={15} />
+            </a>
+            <a href={`tel:+${PHONE_E164}`} className={styles.phoneNum}>
+              {PHONE_DISPLAY}
+            </a>
+          </div>
           <a href="mailto:contact@exvoraagency.com">contact@exvoraagency.com</a>
           <a href="https://exvoraagency.com">exvoraagency.com</a>
         </div>
