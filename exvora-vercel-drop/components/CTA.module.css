@@ -72,6 +72,42 @@
   flex-shrink: 0;
 }
 
+/* Phone row: call + WhatsApp buttons to the left of the number */
+.contactPhone {
+  align-items: center;
+}
+.phoneWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.miniIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--gold);
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+.miniIcon:hover {
+  border-color: var(--gold);
+  background: rgba(212, 175, 95, 0.1);
+  transform: translateY(-2px);
+}
+.phoneText {
+  color: var(--white);
+  transition: color 0.3s var(--ease);
+}
+.phoneText:hover {
+  color: var(--gold);
+}
+
 /* Form */
 .formCard {
   background: linear-gradient(160deg, var(--panel-2), var(--ink));

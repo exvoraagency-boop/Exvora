@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { PhoneIcon, WhatsAppIcon } from "./Icons";
 import styles from "./CTA.module.css";
 
 export default function CTA() {
@@ -33,6 +34,30 @@ export default function CTA() {
           </p>
 
           <div className={styles.contacts}>
+            <div className={`${styles.contactItem} ${styles.contactPhone}`}>
+              <span className={styles.cLabel}>Phone</span>
+              <span className={styles.phoneWrap}>
+                <a
+                  href="tel:+97338922344"
+                  className={styles.miniIcon}
+                  aria-label="Call +973 3892 2344"
+                >
+                  <PhoneIcon size={15} />
+                </a>
+                <a
+                  href="https://wa.me/97338922344"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.miniIcon}
+                  aria-label="WhatsApp +973 3892 2344"
+                >
+                  <WhatsAppIcon size={15} />
+                </a>
+                <a href="tel:+97338922344" className={styles.phoneText}>
+                  +973 3892 2344
+                </a>
+              </span>
+            </div>
             <a href="mailto:contact@exvoraagency.com" className={styles.contactItem}>
               <span className={styles.cLabel}>Email</span>
               contact@exvoraagency.com
